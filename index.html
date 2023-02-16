@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <table>
+            <tr>
+             <td colspan="3"><input type="number" id="n"></td>
+            <td>CE</td>
+            </tr>
+           
+            <tr>
+                <td><button id="1">1</button></td>
+                <td><button id="2" onclick="afficher(event)">2</button></td>
+                <td><button id="3"onclick="afficher(event)">3</button></td>
+                <td><button id="+"onclick="afficher(event)">+</button></td>
+               
+            </tr>
+
+            <tr>
+                <td><button id="5">4</button></td>
+                <td><button id="1">1</button></td>
+                <td><button id="1">1</button></td>
+                <td><button id="1">1</button></td>
+               
+            </tr>
+
+            <tr>
+                <td><button id="1">1</button></td>
+                <td><button id="1">1</button></td>
+                <td><button id="1">1</button></td>
+                <td><button id="1">1</button></td>
+               
+            </tr>
+
+            <tr>
+                <td><button id="1">1</button></td>
+                <td><button id="1">1</button></td>
+                <td><button id="1">1</button></td>
+                <td><button id="=" onclick="compute()">=</button></td>
+               
+            </tr>
+        </table>
+        <script>
+            function afficher(e)
+            {   
+
+                document.getElementById("n").value +=e.target.id;
+            }
+            function compute()
+            {
+
+            }
+
+        </script>
+    </body>
+</html>
