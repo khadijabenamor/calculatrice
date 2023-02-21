@@ -3,12 +3,12 @@
     <body>
         <table>
             <tr>
-             <td colspan="3"><input type="number" id="n"></td>
-            <td>CE</td>
+             <td colspan="3"><input type="text" id="n"></td>
+            <td><button id="CE" onclick="reset()">CE</button></td>
             </tr>
            
             <tr>
-                <td><button id="1">1</button></td>
+                <td><button id="1" onclick="afficher(event)">1</button></td>
                 <td><button id="2" onclick="afficher(event)">2</button></td>
                 <td><button id="3"onclick="afficher(event)">3</button></td>
                 <td><button id="+"onclick="afficher(event)">+</button></td>
@@ -16,25 +16,25 @@
             </tr>
 
             <tr>
-                <td><button id="5">4</button></td>
-                <td><button id="1">1</button></td>
-                <td><button id="1">1</button></td>
-                <td><button id="1">1</button></td>
+                <td><button id="4" onclick="afficher(event)">4</button></td>
+                <td><button id="5" onclick="afficher(event)">5</button></td>
+                <td><button id="6" onclick="afficher(event)">6</button></td>
+                <td><button id="-" onclick="afficher(event)">-</button></td>
                
             </tr>
 
             <tr>
-                <td><button id="1">1</button></td>
-                <td><button id="1">1</button></td>
-                <td><button id="1">1</button></td>
-                <td><button id="1">1</button></td>
+                <td><button id="7" onclick="afficher(event)">7</button></td>
+                <td><button id="8" onclick="afficher(event)">8</button></td>
+                <td><button id="9" onclick="afficher(event)">9</button></td>
+                <td><button id="*" onclick="afficher(event)">*</button></td>
                
             </tr>
 
             <tr>
-                <td><button id="1">1</button></td>
-                <td><button id="1">1</button></td>
-                <td><button id="1">1</button></td>
+                <td><button id="." onclick="afficher(event)">.</button></td>
+                <td><button id="0" onclick="afficher(event)">0</button></td>
+                <td><button id="/" onclick="afficher(event)">/</button></td>
                 <td><button id="=" onclick="compute()">=</button></td>
                
             </tr>
@@ -47,9 +47,12 @@
             }
             function compute()
             {
-
+                document.getElementById("n").value = eval( document.getElementById("n").value );
             }
-
+            function reset()
+            {
+                document.getElementById("n").value =""; 
+            }
         </script>
     </body>
 </html>
